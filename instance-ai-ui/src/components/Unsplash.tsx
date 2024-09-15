@@ -10,7 +10,7 @@ const Unsplash = () => {
     if (model === "dark") {
       return "bg-gradient-to-br from-[#ad5389] to-[#3c1053] flex flex-col justify-center items-center gap-8";
     }
-    return "";
+    return "bg-gradient-to-br from-white to-[#9D50BB] flex flex-col justify-center items-center gap-8";
   }, [model]);
 
   return (
@@ -26,7 +26,7 @@ const Unsplash = () => {
               color="white"
             />
             <Typography
-              className="select-none"
+              className="select-none text-shadow-lg"
               fontFamily="Poppins"
               fontSize="2rem"
               color="white"
@@ -37,7 +37,7 @@ const Unsplash = () => {
           </Box>
         </Grow>
 
-        <CircularProgress color="secondary" />
+        <CircularProgress color={model === "dark" ? "secondary" : "primary"} />
       </Box>
     </Fade>
   );

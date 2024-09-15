@@ -1,7 +1,8 @@
-import React, { createContext, FC, useState } from "react";
+import React, { createContext, FC } from "react";
+import { useLocalStorageState } from "ahooks";
 
 interface GlobalContextType {
-  model: string;
+  model?: string;
   setModel: (model: string) => void;
 }
 
@@ -15,7 +16,10 @@ export const GlobalContext = createContext<GlobalContextType>({
 });
 
 export const GlobalProvider: FC<IProps> = ({ children }) => {
-  const [model, setModel] = useState<string>("dark");
+  const [model, setModel] = useLocalStorageState<string>("instance-ui-model", {
+    defaultValue: "dark",
+    listenStorageChange: true,
+  });
 
   return (
     <GlobalContext.Provider

@@ -1,5 +1,12 @@
 import { FC, useContext } from "react";
-import { AppBar, Box, Container, IconButton, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Typography,
+} from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { Logo } from "../components/SVG.tsx";
 import ContrastIcon from "@mui/icons-material/Contrast";
@@ -14,8 +21,11 @@ const HomeLayout: FC = () => {
 
   return (
     <>
-      <AppBar position="fixed" color="primary">
-        <Box className="flex justify-between px-4 py-3 place-items-center">
+      <AppBar position="fixed">
+        <Box
+          id="home-app-bar"
+          className="flex justify-between px-4 py-3 place-items-center"
+        >
           <Box className="flex justify-between place-items-center gap-3">
             <Logo
               style={{
@@ -35,14 +45,25 @@ const HomeLayout: FC = () => {
             </Typography>
           </Box>
 
-          <IconButton
-            sx={{
-              color: "white",
-            }}
-            onClick={handleToggleTheme}
-          >
-            <ContrastIcon />
-          </IconButton>
+          <Box className="flex justify-between place-items-center gap-4">
+            <Button
+              variant="outlined"
+              sx={{
+                color: "white",
+                borderColor: "white",
+              }}
+            >
+              Login
+            </Button>
+            <IconButton
+              sx={{
+                color: "white",
+              }}
+              onClick={handleToggleTheme}
+            >
+              <ContrastIcon />
+            </IconButton>
+          </Box>
         </Box>
       </AppBar>
 

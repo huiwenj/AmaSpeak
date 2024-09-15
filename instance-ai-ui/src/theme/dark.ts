@@ -5,6 +5,7 @@ const theme = createTheme({
     mode: "dark",
     primary: {
       main: "#6341A4",
+      contrastText: "#fff",
     },
   },
   components: {

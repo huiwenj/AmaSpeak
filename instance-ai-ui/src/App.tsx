@@ -1,7 +1,7 @@
 import "./App.css";
 import router from "./router";
 import { RouterProvider } from "react-router-dom";
-import { Box, CssBaseline, Fade, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import lightTheme from "./theme/light";
 import darkTheme from "./theme/dark";
 import { GlobalContext } from "./store/global.tsx";

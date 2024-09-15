@@ -4,7 +4,7 @@ import { Container } from "@mui/material";
 const Home: FC = () => {
   return (
     <Container>
-      <h1>Home</h1>
+
     </Container>
   );
 };
