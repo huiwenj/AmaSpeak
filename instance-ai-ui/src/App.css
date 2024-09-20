@@ -1,0 +1,11 @@
+body.dark {
+  background: #07080a;
+}
+
+.animate__animated.animate__delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animate__animated.animate__delay-800 {
+  animation-delay: 0.8s;
+}

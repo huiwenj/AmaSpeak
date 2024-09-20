@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC, useRef } from "react";
 import {
   AppBar,
   Box,
@@ -10,10 +10,14 @@ import {
 import { Outlet } from "react-router-dom";
 import { Logo } from "../components/SVG.tsx";
 import ContrastIcon from "@mui/icons-material/Contrast";
-import { GlobalContext } from "../store/global.tsx";
+import { useSize } from "ahooks";
+import { useTheme } from "../hooks/theme.ts";
 
 const HomeLayout: FC = () => {
-  const { model, setModel } = useContext(GlobalContext);
+  const [_, setModel, model] = useTheme();
+
+  const appBarRef = useRef<HTMLDivElement>(null);
+  const size = useSize(appBarRef);
 
   const handleToggleTheme = () => {
     setModel(model === "light" ? "dark" : "light");
@@ -21,10 +25,18 @@ const HomeLayout: FC = () => {
 
   return (
     <>
-      <AppBar position="fixed">
-        <Box
-          id="home-app-bar"
-          className="flex justify-between px-4 py-3 place-items-center"
+      <AppBar
+        elevation={0}
+        className="p-4"
+        sx={{
+          backgroundColor: "transparent",
+        }}
+        position="fixed"
+        ref={appBarRef}
+      >
+        <Container
+          className="flex justify-between py-3 place-items-center bg-[rgba(139,93,232,0.79)] dark:bg-[rgba(12,13,15,.4)] backdrop-blur-sm
+        rounded-2xl dark:border dark:border-zinc-700 shadow"
         >
           <Box className="flex justify-between place-items-center gap-3">
             <Logo
@@ -64,12 +76,17 @@ const HomeLayout: FC = () => {
               <ContrastIcon />
             </IconButton>
           </Box>
-        </Box>
+        </Container>
       </AppBar>
 
-      <Container>
+      <Container
+        className="px-0"
+        style={{ marginTop: (size?.height ?? 0) || 0 }}
+      >
         <Outlet />
       </Container>
+
+      <Box className="h-[10vh]"></Box>
     </>
   );
 };
