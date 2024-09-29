@@ -21,3 +21,6 @@ class User(db.Model):
 
     def __repr__(self) -> str:
         return super().__repr__()
+
+    def check_password(self, password):
+        return self.password == password
