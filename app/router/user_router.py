@@ -1,10 +1,10 @@
-from urllib import request
+from flask import Blueprint, request
 
-from flask import Blueprint, render_template, abort
-
+from app.config.config import get_jwt_manager
 from app.util import string
 
 user_router = Blueprint('user_router', __name__, url_prefix='/api/v1/user')
+
 
 @user_router.route('login', methods=['POST'])
 def login():
@@ -15,8 +15,5 @@ def login():
         return {'message': 'username or password is empty'}, 400
 
     # 查数据库
-
-
-    return {'username': username, 'password': password}
-
-
+    token = get_jwt_manager().generate_jwt(username)
+    return {'token': token, "expire": 3600}
