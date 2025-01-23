@@ -1,4 +1,6 @@
-# Instance AI
+# start instruction
+pnpm install
+pnpm run dev
 
 
 
