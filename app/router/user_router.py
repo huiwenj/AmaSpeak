@@ -16,7 +16,7 @@ def login():
         return {'message': 'username or password is empty'}, 400
 
     # 查数据库
-    user = User.query.filter_by(username=username).first()
+    user = User.query.filter_by(email=username).first()
     if user is None:
         return {'message': 'user not found'}, 400
 

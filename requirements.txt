@@ -1,4 +1,5 @@
 flask
-flask_sqlalchemy
 pymysql
 PyJWT
+flask-cors
+flask_sqlalchemy

@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3819f7e-fb94-4e84-b4f4-e96eafe9003e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/config/db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/router/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/util/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/auth/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/http.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/model/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/model/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/router/user_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/router/user_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../instance-ai-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../instance-ai-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../instance-ai-ui/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../instance-ai-ui/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,23 +35,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/huiwenjia/AmaSpeak/AmaSpeakUI&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/Users/huiwenjia/AmaSpeak/AmaSpeakUI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.dev.executor": "Run",
+    "ts.external.directory.path": "/Users/lomofu/Documents/Project/huiwenj/AmaSpeak/AmaSpeakUI/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17011.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
       </set>
     </attachedChunks>
   </component>
@@ -58,6 +86,7 @@
       <workItem from="1737501579370" duration="4636000" />
       <workItem from="1737562259596" duration="8000" />
       <workItem from="1737562274943" duration="11000" />
+      <workItem from="1740806092573" duration="1065000" />
     </task>
     <servers />
   </component>
