@@ -22,8 +22,11 @@ const Login =() => {
     }
 
     const handleLogin = async () => {
-        const response = await runAsync(username, password);
+        const data = await runAsync(username, password);
         setOpen(true);
+        localStorage.setItem("AUTH_TOKEN", data.token);
+        nav("/app")
+
     }
 
     return (

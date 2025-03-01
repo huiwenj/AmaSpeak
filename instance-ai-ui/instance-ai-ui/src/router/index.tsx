@@ -2,11 +2,17 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../views/home";
 import HomeLayout from "../layout/HomeLayout.tsx";
 import Login from "../views/login";
+import PrivateRoute from "../auth";
+import AppLayout from "../layout/app"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomeLayout />,
+    element:(
+        // <PrivateRoute>
+          <HomeLayout />
+        // </PrivateRoute>
+    ),
     children: [
       {
         path: "/",
@@ -16,12 +22,25 @@ const router = createBrowserRouter([
   },
   {
     "path":"/login",
-    "element":<Login/>, // 组件html标签的形式来写
+    "element": (
+        <PrivateRoute>
+          <Login/>
+        </PrivateRoute>
+    ), // 组件html标签的形式来写
   },
     // login page从homelayout移除之后，就会使用默认layout，打开之后也不会出现header
   {
-    path: "app",
+      path: "app",
+      element: (
+          <PrivateRoute>
+              <AppLayout />
+          </PrivateRoute>
+      ),
     children: [
+      {
+          path: "/",
+          element: <div>App</div>,
+      },
       {
         path: "dashboard",
         element: <div>Dashboard</div>,
