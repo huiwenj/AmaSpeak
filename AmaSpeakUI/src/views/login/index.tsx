@@ -5,6 +5,7 @@ import {login} from "../../api/auth"
 import {useState} from "react";
 
 
+
 const Login =() => {
 
     const nav = useNavigate();
@@ -22,8 +23,12 @@ const Login =() => {
     }
 
     const handleLogin = async () => {
-        const response = await runAsync(username, password);
         setOpen(true);
+        const data = await runAsync(username, password);
+        // @ts-ignore
+        localStorage.setItem("AUTH_TOKEN", data.token);
+        nav("/app");
+
     }
 
     return (
@@ -35,6 +40,7 @@ const Login =() => {
                 open={open}
                 onClose={() => setOpen(false)}
                 message="login successful"
+                autoHideDuration={2000}
             />
 
             <Box className="flex flex-col items-center gap-4 mt-20">
@@ -71,6 +77,7 @@ const Login =() => {
             */}
             <Box className="flex flex-col gap-6 min-w-[80vw] md:min-w-[40vw] lg:min-w-[30vw] border p-6 rounded-xl dark:bg-black">
                 <TextField
+                    disabled={loading}
                     fullWidth
                     value = {username}
                      onChange={(e) => setUsername(e.target.value)}
@@ -78,6 +85,7 @@ const Login =() => {
                     className = "dark:bg-[#0D1117]"
                     variant="outlined" />
                 <TextField
+                    disabled={loading}
                     value = {password}
                      onChange={(e) => setPassword(e.target.value)}
                     fullWidth
@@ -86,6 +94,7 @@ const Login =() => {
                     className = "dark:bg-[#0D1117]"
                     />
                 <Button
+                    disabled={loading}
                     variant="contained"
                     className="bg-purple-600 hover:bg-purple-700 transition-colors py-2"
                     onClick={handleLogin}
